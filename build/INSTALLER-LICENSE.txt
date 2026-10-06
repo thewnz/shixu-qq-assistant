@@ -1,0 +1,59 @@
+MIT License
+
+Copyright (c) 2026 Shixu contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+拾序 Windows 安装版 — 第三方组件说明
+
+拾序自身源码：MIT，Copyright (c) 2026 Shixu contributors。
+桌面运行环境 Electron：MIT；Chromium 及组件许可随 Electron 的 LICENSE 和 LICENSES.chromium.html 分发。
+React、React DOM、ws、Phosphor Icons、adm-zip：遵循各自随包许可。
+
+QQ 桥接 NapCatQQ v4.18.30
+来源：https://github.com/NapNeko/NapCatQQ/releases/tag/v4.18.30
+项目：https://github.com/NapNeko/NapCatQQ
+版权：Copyright © 2024 Mlikiowa
+原始发行包：NapCat.Shell.zip
+SHA-256：902207c64c249eae98f868e41d5546920d78d7ecb5eae8cabb5b3d6fae556583
+安装包保留原始桥接压缩包，不修改其中的源代码；用户首次配置时在自己的本机目录解压并生成本机配置。
+完整许可位于 resources/bridge/NAPCAT-LICENSE.txt。
+NapCat 许可限制非商业用途。因此含此第三方组件的安装版仅供免费、非商业分享使用；不代表取得商业使用授权。商业分发应另行取得作者授权。
+QQ 桌面客户端不包含在安装包中，需要使用者在自己电脑上安装腾讯 QQ；软件提供官方 QQ 下载入口与自动检测。账号由用户本人扫码登录。
+
+各依赖的包级许可保留于应用运行资源中。安装包不包含开发者聊天记录、API 密钥、QQ 登录资料或测试数据。
+
+
+Limited Redistribution License for NapCat
+
+Copyright © 2024 Mlikiowa
+1. Usage and Reproduction:
+   - Unauthorized use, reproduction, modification, or distribution of this code is prohibited without explicit permission from the main author of the NapCat repository.
+
+2. Redistribution:
+   - Redistribution of this code is permitted, provided that the full text of this license is included, and the source and copyright information is clearly stated.
+   - Minor modifications and extensions are allowed for redistribution purposes, but the modified code must not be publicly released.
+3. Non-Commercial Use:
+   - This code is not to be used for any commercial purposes.
+
+4. Additional Permissions:
+   - Any rights not explicitly addressed in this license must be requested from and granted by the main author of the NapCat repository.
+5. Disclaimer:
+   - This code is provided "as is," without any express or implied warranties, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. In no event shall the author be liable for any damages or other liability arising from, out of, or in connection with the use or distribution of this code.

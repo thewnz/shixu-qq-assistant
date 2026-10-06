@@ -1,0 +1,296 @@
+{
+  "messages": [
+    {
+      "id": "demo-message-0",
+      "source": "demo",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "sender": "群管理员",
+      "text": "@所有人 提交本学期奖学金申请。填写申请表，将成绩单与证明材料打包发送至辅导员邮箱。 截止：2026/10/5 23:00:00，适用：符合奖学金申请条件的同学。",
+      "attachments": [
+        {
+          "type": "文件",
+          "name": "奖学金申请表.docx",
+          "url": null,
+          "identity": "demo-file"
+        }
+      ],
+      "receivedAt": "2026-10-03T01:00:00.000Z",
+      "sentAt": "2026-10-03T01:00:00.000Z",
+      "category": "task",
+      "status": "done",
+      "reason": "演示样例，非真实 QQ 消息"
+    },
+    {
+      "id": "demo-message-1",
+      "source": "demo",
+      "groupId": "demo-course",
+      "group": "数据结构 · 课程群",
+      "sender": "群管理员",
+      "text": "@所有人 完成数据结构实验报告。完成链表实验，并上传 PDF 实验报告至课程平台。 截止：2026/10/6 23:00:00，适用：选修数据结构的同学。",
+      "attachments": [],
+      "receivedAt": "2026-10-03T01:00:00.000Z",
+      "sentAt": "2026-10-03T01:00:00.000Z",
+      "category": "task",
+      "status": "done",
+      "reason": "演示样例，非真实 QQ 消息"
+    },
+    {
+      "id": "demo-message-2",
+      "source": "demo",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "sender": "群管理员",
+      "text": "@所有人 确认班级信息登记表。核对姓名、学号与联系方式，填写共享表格。 截止：2026/10/6 23:00:00，适用：全体同学。",
+      "attachments": [],
+      "receivedAt": "2026-10-03T01:00:00.000Z",
+      "sentAt": "2026-10-03T01:00:00.000Z",
+      "category": "task",
+      "status": "done",
+      "reason": "演示样例，非真实 QQ 消息"
+    },
+    {
+      "id": "demo-message-3",
+      "source": "demo",
+      "groupId": "demo-club",
+      "group": "校园摄影社",
+      "sender": "群管理员",
+      "text": "@所有人 报名秋日校园摄影活动。填写报名表，并选择一个拍摄时段。 截止：2026/10/8 23:00:00，适用：摄影社成员。",
+      "attachments": [],
+      "receivedAt": "2026-10-03T01:00:00.000Z",
+      "sentAt": "2026-10-03T01:00:00.000Z",
+      "category": "task",
+      "status": "done",
+      "reason": "演示样例，非真实 QQ 消息"
+    },
+    {
+      "id": "demo-message-4",
+      "source": "demo",
+      "groupId": "demo-course",
+      "group": "数据结构 · 课程群",
+      "sender": "群管理员",
+      "text": "@所有人 提交课程小组分工。小组长汇总成员分工并提交至课程平台。 截止：2026/10/18 23:00:00，适用：各小组组长。",
+      "attachments": [],
+      "receivedAt": "2026-10-03T01:00:00.000Z",
+      "sentAt": "2026-10-03T01:00:00.000Z",
+      "category": "task",
+      "status": "done",
+      "reason": "演示样例，非真实 QQ 消息"
+    },
+    {
+      "id": "demo-chat",
+      "source": "demo",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "sender": "小林",
+      "text": "晚上有人一起去食堂吗？",
+      "attachments": [],
+      "receivedAt": "2026-10-06T01:00:00.000Z",
+      "sentAt": "2026-10-06T01:00:00.000Z",
+      "category": "chat",
+      "status": "done",
+      "filtered": true,
+      "reason": "闲聊，不生成待办"
+    },
+    {
+      "id": "demo-notice",
+      "source": "demo",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "sender": "班长",
+      "text": "通知：周四下午的课程调整到教学楼 A302。",
+      "attachments": [],
+      "receivedAt": "2026-10-06T01:00:00.000Z",
+      "sentAt": "2026-10-06T01:00:00.000Z",
+      "category": "notice",
+      "status": "done",
+      "reason": "课程安排，无需办理"
+    },
+    {
+      "id": "demo-review",
+      "source": "demo",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "sender": "辅导员",
+      "text": "需要助学金的同学请尽快提交材料。【文件】",
+      "attachments": [
+        {
+          "type": "文件",
+          "name": "助学金说明.pdf",
+          "identity": "demo-aid"
+        }
+      ],
+      "receivedAt": "2026-10-06T01:00:00.000Z",
+      "sentAt": "2026-10-06T01:00:00.000Z",
+      "category": "task",
+      "status": "done",
+      "reason": "缺少截止时间，等待确认"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "demo-task-0",
+      "title": "提交本学期奖学金申请",
+      "messageId": "demo-message-0",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "deadline": "2026-10-05T15:00:00.000Z",
+      "priority": "high",
+      "assignee": "符合奖学金申请条件的同学",
+      "audience": "符合奖学金申请条件的同学",
+      "channel": "辅导员邮箱",
+      "condition": "申请表完整且材料齐全",
+      "action": "填写申请表，将成绩单与证明材料打包发送至辅导员邮箱。",
+      "createdAt": "2026-10-03T01:00:00.000Z",
+      "completedAt": null,
+      "review": false,
+      "missing": [],
+      "attachments": [
+        {
+          "type": "文件",
+          "name": "奖学金申请表.docx",
+          "url": null,
+          "identity": "demo-file"
+        }
+      ],
+      "manualOrder": 0
+    },
+    {
+      "id": "demo-task-1",
+      "title": "完成数据结构实验报告",
+      "messageId": "demo-message-1",
+      "groupId": "demo-course",
+      "group": "数据结构 · 课程群",
+      "deadline": "2026-10-06T15:00:00.000Z",
+      "priority": "high",
+      "assignee": "选修数据结构的同学",
+      "audience": "选修数据结构的同学",
+      "channel": "课程平台",
+      "condition": "完成实验一与实验二",
+      "action": "完成链表实验，并上传 PDF 实验报告至课程平台。",
+      "createdAt": "2026-10-03T01:00:00.000Z",
+      "completedAt": null,
+      "review": false,
+      "missing": [],
+      "attachments": [],
+      "manualOrder": 1
+    },
+    {
+      "id": "demo-task-2",
+      "title": "确认班级信息登记表",
+      "messageId": "demo-message-2",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "deadline": "2026-10-06T15:00:00.000Z",
+      "priority": "medium",
+      "assignee": "全体同学",
+      "audience": "全体同学",
+      "channel": "群内共享表格",
+      "condition": "无额外条件",
+      "action": "核对姓名、学号与联系方式，填写共享表格。",
+      "createdAt": "2026-10-03T01:00:00.000Z",
+      "completedAt": null,
+      "review": false,
+      "missing": [],
+      "attachments": [],
+      "manualOrder": 2
+    },
+    {
+      "id": "demo-task-3",
+      "title": "报名秋日校园摄影活动",
+      "messageId": "demo-message-3",
+      "groupId": "demo-club",
+      "group": "校园摄影社",
+      "deadline": "2026-10-08T15:00:00.000Z",
+      "priority": "medium",
+      "assignee": "摄影社成员",
+      "audience": "摄影社成员",
+      "channel": "群内报名表",
+      "condition": "自备拍摄设备",
+      "action": "填写报名表，并选择一个拍摄时段。",
+      "createdAt": "2026-10-03T01:00:00.000Z",
+      "completedAt": null,
+      "review": false,
+      "missing": [],
+      "attachments": [],
+      "manualOrder": 3
+    },
+    {
+      "id": "demo-task-4",
+      "title": "提交课程小组分工",
+      "messageId": "demo-message-4",
+      "groupId": "demo-course",
+      "group": "数据结构 · 课程群",
+      "deadline": "2026-10-18T15:00:00.000Z",
+      "priority": "low",
+      "assignee": "各小组组长",
+      "audience": "各小组组长",
+      "channel": "课程平台",
+      "condition": "完成组队",
+      "action": "小组长汇总成员分工并提交至课程平台。",
+      "createdAt": "2026-10-03T01:00:00.000Z",
+      "completedAt": null,
+      "review": false,
+      "missing": [],
+      "attachments": [],
+      "manualOrder": 4
+    },
+    {
+      "id": "demo-task-review",
+      "title": "提交助学金申请材料",
+      "messageId": "demo-review",
+      "groupId": "demo-class",
+      "group": "计算机 2401 班",
+      "action": "补充并提交申请材料",
+      "audience": "申请助学金的同学",
+      "assignee": null,
+      "condition": null,
+      "channel": null,
+      "deadline": null,
+      "priority": "medium",
+      "createdAt": "2026-10-06T01:00:00.000Z",
+      "completedAt": null,
+      "review": true,
+      "missing": [
+        "assignee",
+        "condition",
+        "channel",
+        "deadline"
+      ],
+      "attachments": [],
+      "manualOrder": 8
+    }
+  ],
+  "groups": [
+    {
+      "id": "demo-class",
+      "name": "计算机 2401 班",
+      "color": "blue"
+    },
+    {
+      "id": "demo-course",
+      "name": "数据结构 · 课程群",
+      "color": "green"
+    },
+    {
+      "id": "demo-club",
+      "name": "校园摄影社",
+      "color": "orange"
+    }
+  ],
+  "rules": [],
+  "settings": {
+    "wsUrl": "ws://127.0.0.1:3001",
+    "apiBase": "https://api.openai.com/v1",
+    "model": "",
+    "cloudEnabled": false,
+    "selectedGroups": [
+      "demo-class",
+      "demo-course",
+      "demo-club"
+    ],
+    "profile": "",
+    "reminders": true
+  },
+  "feedbackCount": 0
+}

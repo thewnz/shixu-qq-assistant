@@ -1,0 +1,7 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {importantTasks,clampPosition}=require('../electron/floating.cjs');
+const now=new Date('2026-10-06T12:00:00+08:00');
+test('悬浮窗按逾期、今日到期、高优先级筛选，排除普通远期、完成和待确认任务',()=>{const tasks=[{id:'normal',title:'普通远期',deadline:'2026-12-01T18:00:00+08:00',priority:'medium'},{id:'high',title:'重点',priority:'high'},{id:'today',title:'今天',deadline:'2026-10-06T18:00:00+08:00'},{id:'expired',title:'过期',deadline:'2026-10-05T18:00:00+08:00'},{id:'review',title:'待确认',review:true,priority:'high'},{id:'done',title:'完成',completedAt:'2026-10-05T18:00:00+08:00',priority:'high'}];const result=importantTasks(tasks,now);assert.deepEqual(result.tasks.map(t=>t.id),['expired','today','high']);assert.equal(result.today,1);assert.equal(result.expired,1);assert.equal(result.review,1);assert.equal(result.total,3);});
+test('最多显示四条，保留重要任务总数，不泄漏消息或配置',()=>{const result=importantTasks(Array.from({length:8},(_,i)=>({id:String(i),title:'任务'+i,priority:'high',secret:'不应传入'})),now);assert.equal(result.total,8);assert.equal(result.tasks.length,4);assert.equal(JSON.stringify(result).includes('不应传入'),false);});
+test('恢复位置钳制在当前显示器工作区，支持负坐标与无效存储值',()=>{const area={x:-1920,y:0,width:1920,height:1080};assert.deepEqual(clampPosition({x:9999,y:9999},area,348,518),{x:-348,y:562});assert.deepEqual(clampPosition({x:-9999,y:-100},area,348,68),{x:-1920,y:0});assert.deepEqual(clampPosition({x:NaN,y:undefined},area,348,518),{x:-370,y:60});});

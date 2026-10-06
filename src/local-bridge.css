@@ -1,0 +1,3 @@
+.local-bridge-banner{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:19px 22px;background:#eef4ff;border:1px solid #dce7ff;border-radius:11px;margin:0 0 27px}.local-bridge-banner>div{display:flex;gap:12px;align-items:center;color:#6c8ac7}.local-bridge-banner strong{font-size:12px;font-weight:500;display:block}.local-bridge-banner small{font-size:10px;color:#94a5c5;display:block;margin-top:7px;max-width:380px;line-height:1.7}@media(max-width:1200px){.local-bridge-banner{align-items:flex-start;flex-direction:column}}
+
+.bridge-buttons{flex-wrap:wrap;max-width:530px}.local-bridge-banner small{color:#627798}.local-bridge-banner strong{color:#365481}

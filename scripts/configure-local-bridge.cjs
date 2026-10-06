@@ -1,0 +1,13 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const {randomBytes}=require('node:crypto');
+const root=path.resolve(process.argv[2]||'');
+if(!process.argv[2])throw Error('Provide bridge directory');
+const runtime=path.join(root,'runtime'),config=path.join(runtime,'config');
+if(!fs.existsSync(path.join(runtime,'napcat.mjs')))throw Error('Run setup-bridge.ps1 first');
+fs.mkdirSync(config,{recursive:true});
+const writeIfMissing=(name,object)=>{const file=path.join(config,name);if(!fs.existsSync(file))fs.writeFileSync(file,JSON.stringify(object,null,2));};
+writeIfMissing('onebot11.json',{network:{httpServers:[],httpClients:[],websocketServers:[{name:'ShixuLocal',enable:true,host:'127.0.0.1',port:3001,messagePostFormat:'array',reportSelfMessage:true,token:randomBytes(32).toString('hex'),enableForcePushEvent:true,debug:false,heartInterval:30000}],websocketClients:[]},musicSignUrl:'',enableLocalFile2Url:false,parseMultMsg:false});
+writeIfMissing('webui.json',{host:'127.0.0.1',port:6099,token:randomBytes(32).toString('hex'),loginRate:3});
+const qqPath=process.argv[3];if(!qqPath||!fs.existsSync(qqPath))throw Error('Provide existing QQ executable as third argument');fs.mkdirSync('.local-data',{recursive:true});fs.writeFileSync('.local-data/bridge-location.json',JSON.stringify({runtime,qqPath:path.resolve(qqPath)},null,2));
+console.log('Prepared loopback-only WebSocket and login UI. Tokens stay in local files and will be imported encrypted by Shixu.');

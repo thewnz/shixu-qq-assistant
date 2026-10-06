@@ -1,0 +1,85 @@
+{
+  "name": "shixu-qq-assistant",
+  "version": "0.2.0",
+  "private": true,
+  "description": "拾序 · 高校群消息待办助手",
+  "license": "MIT",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "start": "npm run build && electron .",
+    "desktop": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "package": "npm run build && electron-builder --win nsis --x64",
+    "package:dir": "npm run build && electron-builder --win --dir --x64",
+    "bridge:fetch": "node scripts/fetch-bridge.cjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "adm-zip": "^0.6.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^41.0.0",
+    "electron-builder": "^26.15.3",
+    "playwright": "^1.63.0",
+    "vite": "^7.1.0"
+  },
+  "author": "Shixu contributors",
+  "build": {
+    "appId": "cn.shixu.assistant",
+    "productName": "拾序",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.txt"
+    ],
+    "extraResources": [
+      {
+        "from": "build/resources/NapCat.Shell.zip",
+        "to": "bridge/NapCat.Shell.zip"
+      },
+      {
+        "from": "build/NAPCAT-LICENSE.txt",
+        "to": "bridge/NAPCAT-LICENSE.txt"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "signExecutable": false,
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": false,
+      "artifactName": "Shixu-Setup-${version}-${arch}.${ext}",
+      "license": "build/INSTALLER-LICENSE.txt"
+    },
+    "extraFiles": [
+      {
+        "from": "THIRD_PARTY_NOTICES.txt",
+        "to": "THIRD_PARTY_NOTICES.txt"
+      },
+      {
+        "from": "LICENSE",
+        "to": "LICENSE.shixu.txt"
+      }
+    ],
+    "electronDist": "node_modules/electron/dist"
+  }
+}

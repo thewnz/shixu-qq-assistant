@@ -1,0 +1,2 @@
+const {contextBridge,ipcRenderer}=require('electron');
+contextBridge.exposeInMainWorld('shixu',{call:(action,payload={})=>ipcRenderer.invoke('shixu:call',action,payload),subscribe:(listener)=>{const fn=()=>listener();ipcRenderer.on('shixu:change',fn);return()=>ipcRenderer.removeListener('shixu:change',fn);},subscribeOpen:(listener)=>{const fn=(_event,payload)=>listener(payload);ipcRenderer.on('shixu:open',fn);return()=>ipcRenderer.removeListener('shixu:open',fn);}});
